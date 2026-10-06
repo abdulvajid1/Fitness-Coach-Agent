@@ -1,0 +1,26 @@
+[project]
+name = "fitness-coach-agent"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "abdulvajid1", email = "vajidca444@gmail.com" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "pydantic>=2.13.5",
+    "pytest>=9.1.1",
+    "python-dotenv>=1.2.4",
+]
+
+[project.scripts]
+fitness-coach-agent = "fitness_coach_agent:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
